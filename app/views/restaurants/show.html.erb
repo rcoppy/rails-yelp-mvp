@@ -4,7 +4,7 @@
 <p><%= @restaurant.address %></p> 
 <p><%= @restaurant.phone_number %></p>
 
-<%= link_to 'add a review', new_restaurant_review(@restaurant) %>
+<%= link_to 'add a review', new_restaurant_review_path(@restaurant) %>
 
 <% @restaurant.reviews.each do |review| %>
     <div class="review">
@@ -18,3 +18,5 @@
         <p><%= review.content %></p>
     </div>
 <% end %>
+
+<%= link_to 'back', restaurants_path %>
